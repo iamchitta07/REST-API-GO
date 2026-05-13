@@ -7,3 +7,7 @@ POST    /signup                 => Create a new user
 POST    /login                  => Authenticate user (Auth token(JWT))
 POST    /events/<id>/register   => Register user for a event (auth required)
 DELETE  /events/<id>/register   => cancel regestration (auth required)
+
+
+// Packages
+/models => event.go -> stores and fetches events data in/from DB
