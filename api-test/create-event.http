@@ -6,5 +6,4 @@ Content-Type: application/json
     "description": "Test Description",
     "location": "Test Location",
     "dateTime": "2026-01-01T15:30:00.000Z"
-
 }
