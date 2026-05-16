@@ -37,6 +37,11 @@ func getHome(ctx *gin.Context) {
 }
 
 func createEvent(ctx *gin.Context) {
+	token := ctx.Request.Header.Get("Authorization")
+	if token == "" {
+		ctx.JSON(http.StatusUnauthorized, gin.H{"message": "Not Authorizatized!"})
+		return
+	}
 	var event models.Event
 	err := ctx.ShouldBindBodyWithJSON(&event)
 
